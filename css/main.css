@@ -1,0 +1,95 @@
+html, body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 90vh;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+}
+
+.panel {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0.2rem;
+  flex: 0.5;
+  transition: flex 0.7s ease-in;
+}
+
+.panel--1 {
+  background-image: url("https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.panel--2 {
+  background-image: url("https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.panel--3 {
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80");
+}
+
+.panel--4 {
+  background-image: url("https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80");
+}
+
+.panel--5 {
+  background-image: url("https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+}
+
+.panel__titel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  overflow: hidden;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  min-width: 30rem;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel--active {
+  flex: 5;
+}
+
+.panel--active > .panel__titel {
+  opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-last-of-type(-n+2) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */
